@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rizky Pandu Prawira Personal Website</title>
+    <link rel="stylesheet" href="html .css" />
+    <link rel="icon" href="image/p.png" type="png">
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: #111;
+      }
+
+      body {
+  background-color: #ff004f;
+}
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li><a class="active" href="index .html">Home</a></li>
+      <li><a href="cv/CV RIZKY PANDU PRAWIRA.pdf">Download CV</a></li>
+      <li><a href="about .html">About Me</a></li>
+      <li><a href="coming soon stan.html">My Dream</a></li>
+      <li><a href="Lagufav.html">My Favorite Song Playlist</a></li>
+    </ul>
+    </div>
+
+    <hr />
+    <br />
+<div class="bungkus1">
+    <div class="song">
+      <h3>Billie Elish - BIRDS OF A FEATHER</h3>
+      <button onclick="toggleAudio(0)">Putar Musik</button>
+      <img src="https://static.wikia.nocookie.net/wherearetheavocados/images/6/6d/HIT_ME_HARD_AND_SOFT.png/revision/latest/scale-to-width-down/1200?cb=20240408153454" alt="Lagu 1" style="aspect-ratio: 1/1; width: 250px;">
+      <audio id="audio0">
+        <source
+          src="song/Billie Eilish - BIRDS OF A FEATHER (Official Lyric Video).mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+    </div>
+
+    <div class="song">
+      <h3>Yovie & Nuno - Sampai Akhir Waktu</h3>
+      <button onclick="toggleAudio(1)">Putar Musik</button>
+      <img src="https://i.scdn.co/image/ab67616d0000b2730fe7814ce91a1b4e7b0d5881" alt="Lagu 1" style="aspect-ratio: 1/1; width: 250px;">
+      <audio id="audio1">
+        <source
+          src="song/Yovie & Nuno - Sampai Akhir Waktu (Lyric Video) - Sony Music Entertainment Indonesia (youtube).mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+    </div>
+
+    <div class="song">
+      <h3>Lauv & LANY - Mean It</h3>
+      <button onclick="toggleAudio(2)">Putar Musik</button>
+      <img src="https://i.scdn.co/image/ab67616d0000b2732c0e1e9e1fd1e7b132da1606" alt="Lagu 1" style="aspect-ratio: 1/1; width: 250px;">
+      <audio id="audio2">
+        <source
+          src="song/Lauv & LANY - Mean It Terjemahan Indonesia.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+    </div>
+</div>
+<div class="bungkus1">
+    <div class="song">
+      <h3>HIVI - Siapkah Kau 'Tuk Jatuh Cinta Lagi</h3>
+      <button onclick="toggleAudio(3)">Putar Musik</button>
+      <img src="https://i1.sndcdn.com/artworks-000132700035-8apjnp-t500x500.jpg" alt="Lagu 1" style="aspect-ratio: 1/1; width: 250px;">
+      <audio id="audio3">
+        <source
+          src="song/HIVI_ - Siapkah Kau _Tuk Jatuh Cinta Lagi (Official Lyric Video)_kX1O93X77d4.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+    </div>
+
+    <div class="song">
+      <h3>Backstreet Boys - Shape Of My Heart</h3>
+      <button onclick="toggleAudio(4)">Putar Musik</button>
+      <img src="https://i1.sndcdn.com/artworks-000244976296-4ivva8-t500x500.jpg" alt="Lagu 1" style="aspect-ratio: 1/1; width: 250px;">
+      <audio id="audio4">
+        <source
+          src="song/Backstreet Boys - Shape Of My Heart (Official HD Video)_OT5msu-dap8.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+    </div>
+</div>
+
+    <script>
+      function toggleAudio(index) {
+        const audio = document.getElementById(`audio${index}`);
+        const button = event.target;
+
+        if (audio.paused) {
+          // Jeda lagu lain jika sedang diputar
+          for (let i = 0; i < 5; i++) {
+            if (i !== index) {
+              const otherAudio = document.getElementById(`audio${i}`);
+              otherAudio.pause();
+            }
+          }
+          audio.play();
+          button.textContent = "Stop Musik";
+        } else {
+          audio.pause();
+          button.textContent = "Putar Musik";
+        }
+      }
+    </script>
+    <hr />
+    <footer style="text-align: center">
+      <p>Copyright &copy; 2024 Rizky Pandu Prawira.</p>
+    </footer>
+  </body>
+</html>
